@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -151,8 +152,15 @@
         }
 
         @keyframes floatSlow {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(30px, -30px); }
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(30px, -30px);
+            }
         }
 
         .hero-container {
@@ -196,6 +204,7 @@
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -260,6 +269,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -275,12 +285,21 @@
 
         .hero-image {
             width: 100%;
-            height: 650px;
+            height: 0;
+            padding-bottom: 80%;
             background: linear-gradient(135deg, var(--accent), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
         .floating-badge {
@@ -305,8 +324,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .badge-icon {
@@ -424,7 +450,7 @@
             font-size: 1.05rem;
         }
 
-        /* Tours Demonstration Section - CORRIGIDA */
+        /* Tours Demonstration Section */
         .tours-demo {
             padding: 8rem 3rem;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -500,7 +526,7 @@
             text-transform: uppercase;
         }
 
-        /* YouTube Video Section */
+        /* YouTube Video Section - CORRIGIDA */
         .video-section {
             padding: 8rem 3rem;
             background: var(--primary);
@@ -515,7 +541,7 @@
         .video-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             margin: 3rem auto 0;
             border-radius: 24px;
@@ -970,6 +996,7 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
+
             .hero-container,
             .about-content,
             .founder-container {
@@ -1080,11 +1107,11 @@
             .tour-iframe-container {
                 height: 400px;
             }
-            
+
             .section-header {
                 margin-bottom: 3rem;
             }
-            
+
             .section-title {
                 font-size: clamp(2rem, 4vw, 3rem);
             }
@@ -1094,27 +1121,27 @@
             .tours-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .tour-item {
                 margin-bottom: 2rem;
             }
-            
+
             .tour-iframe-container {
                 height: 300px;
             }
-            
+
             .service-card,
             .benefit-item {
                 padding: 2rem;
             }
-            
+
             .btn-primary,
             .btn-secondary {
                 padding: 1.2rem 2rem;
                 width: 100%;
                 justify-content: center;
             }
-            
+
             .hero-buttons {
                 gap: 1rem;
             }
@@ -1137,6 +1164,7 @@
         }
     </style>
 </head>
+
 <body>
     <header id="header">
         <nav>
@@ -1161,10 +1189,13 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Transforme <span class="highlight">espaços</span> em experiências <span class="highlight">inesquecíveis</span></h1>
-                <p>Fotografia 360º profissional, tours virtuais imersivos e presença estratégica no Google. Seu negócio trabalhando 24h por dia, conquistando clientes antes mesmo da primeira visita.</p>
+                <h1>Transforme <span class="highlight">espaços</span> em experiências <span
+                        class="highlight">inesquecíveis</span></h1>
+                <p>Fotografia 360º profissional, tours virtuais imersivos e presença estratégica no Google. Seu negócio
+                    trabalhando 24h por dia, conquistando clientes antes mesmo da primeira visita.</p>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/+5519989397275?text=Olá,%20gostaria%20de%20um%20orçamento%20profissional" class="btn-primary">
+                    <a href="https://wa.me/+5519989397275?text=Olá,%20gostaria%20de%20um%20orçamento%20profissional"
+                        class="btn-primary">
                         Solicitar Orçamento →
                     </a>
                     <a href="#tours" class="btn-secondary">
@@ -1174,7 +1205,7 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-image-container">
-                    <div class="hero-image">📷</div>
+                    <div class="hero-image"><img src="./IMG/2151624886.jpg" alt=""></div>
                 </div>
                 <div class="floating-badge badge-1">
                     <div class="badge-icon">✨</div>
@@ -1198,32 +1229,38 @@
             <div class="service-card reveal">
                 <div class="service-icon">📸</div>
                 <h3>FOTOS 360°</h3>
-                <p>Fotos em 360° oferecem uma visão completa do seu negócio, atraindo mais clientes e aumentando a confiança.</p>
+                <p>Fotos em 360° oferecem uma visão completa do seu negócio, atraindo mais clientes e aumentando a
+                    confiança.</p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon">🏢</div>
                 <h3>TOUR VIRTUAL</h3>
-                <p>Tour virtual 360° que permite ao cliente conhecer seu negócio por dentro antes mesmo de visitá-lo.</p>
+                <p>Tour virtual 360° que permite ao cliente conhecer seu negócio por dentro antes mesmo de visitá-lo.
+                </p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon">🎥</div>
                 <h3>VÍDEOS 360°</h3>
-                <p>Vídeos 360° colocam seu cliente dentro do seu negócio, aumentando engajamento, confiança e decisões de compra.</p>
+                <p>Vídeos 360° colocam seu cliente dentro do seu negócio, aumentando engajamento, confiança e decisões
+                    de compra.</p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon">🔍</div>
                 <h3>GOOGLE MEU NEGÓCIO</h3>
-                <p>Elaboração e atualização do Google Meu Negócio para aumentar visibilidade local, credibilidade e atrair mais clientes da sua região.</p>
+                <p>Elaboração e atualização do Google Meu Negócio para aumentar visibilidade local, credibilidade e
+                    atrair mais clientes da sua região.</p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon">📍</div>
                 <h3>GOOGLE STREET VIEW</h3>
-                <p>Publicação no Google Street View para destacar seu negócio no Maps, aumentar visibilidade local e gerar mais visitas presenciais.</p>
+                <p>Publicação no Google Street View para destacar seu negócio no Maps, aumentar visibilidade local e
+                    gerar mais visitas presenciais.</p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon">📱</div>
                 <h3>Conteúdo para Redes</h3>
-                <p>Material visual premium formatado para Instagram, Facebook e LinkedIn, mantendo identidade visual consistente e profissional.</p>
+                <p>Material visual premium formatado para Instagram, Facebook e LinkedIn, mantendo identidade visual
+                    consistente e profissional.</p>
             </div>
         </div>
     </section>
@@ -1233,41 +1270,38 @@
             <div class="section-header reveal">
                 <span class="section-tag">Demonstração Real</span>
                 <h2 class="section-title">Tours Virtuais em Ação</h2>
-                <p class="section-description">Explore nossos trabalhos e veja a qualidade imersiva que seu negócio pode ter</p>
+                <p class="section-description">Explore nossos trabalhos e veja a qualidade imersiva que seu negócio pode
+                    ter</p>
             </div>
             <div class="tours-grid">
                 <div class="tour-item reveal">
                     <div class="tour-iframe-container">
                         <!-- Tour Virtual Individual -->
-                        <iframe 
-                            src="https://kuula.co/share/hrrbN?logo=1&info=0&logosize=200&fs=1&vr=0&thumbs=1&margin=3&alpha=0.60&inst=pt" 
-                            frameborder="0" 
-                            allowfullscreen 
-                            allow="xr-spatial-tracking; gyroscope; accelerometer"
-                            scrolling="no">
-                        </iframe>
+                        <iframe width="100%" height="640" frameborder="0"
+                            allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no"
+                            src="https://kuula.co/share/hrrZw?logo=1&info=0&logosize=200&fs=1&vr=1&sd=1&thumbs=1&margin=3&alpha=0.60&inst=pt"></iframe>
                     </div>
                     <div class="tour-info">
                         <h3>Tour Virtual - Ambiente Interno</h3>
-                        <p>Navegação completa em 360° mostrando cada detalhe do espaço com qualidade profissional. Explore salas, corredores e ambientes como se estivesse presente.</p>
+                        <p>Navegação completa em 360° mostrando cada detalhe do espaço com qualidade profissional.
+                            Explore salas, corredores e ambientes como se estivesse presente.</p>
                         <span class="tour-tag">Tour Individual</span>
                     </div>
                 </div>
-                
+
                 <div class="tour-item reveal">
                     <div class="tour-iframe-container">
                         <!-- Coleção de Tours -->
-                        <iframe 
-                            src="https://kuula.co/share/collection/7HxjS?logo=1&info=0&logosize=200&fs=1&vr=0&thumbs=1&margin=3&alpha=0.60&inst=pt" 
-                            frameborder="0" 
-                            allowfullscreen 
-                            allow="xr-spatial-tracking; gyroscope; accelerometer"
+                        <iframe
+                            src="https://kuula.co/share/collection/7HxjS?logo=1&info=0&logosize=200&fs=1&vr=0&thumbs=1&margin=3&alpha=0.60&inst=pt"
+                            frameborder="0" allowfullscreen allow="xr-spatial-tracking; gyroscope; accelerometer"
                             scrolling="no">
                         </iframe>
                     </div>
                     <div class="tour-info">
                         <h3>Coleção Completa - Múltiplos Ambientes</h3>
-                        <p>Conjunto de tours virtuais conectados, permitindo explorar diferentes áreas do mesmo negócio em uma experiência contínua e imersiva.</p>
+                        <p>Conjunto de tours virtuais conectados, permitindo explorar diferentes áreas do mesmo negócio
+                            em uma experiência contínua e imersiva.</p>
                         <span class="tour-tag">Coleção Completa</span>
                     </div>
                 </div>
@@ -1280,15 +1314,14 @@
             <div class="section-header reveal">
                 <span class="section-tag">Vídeo Demonstrativo</span>
                 <h2 class="section-title">Veja Como Funciona</h2>
-                <p class="section-description">Assista ao vídeo e entenda o impacto que um tour virtual 360º pode ter no seu negócio</p>
+                <p class="section-description">Assista ao vídeo e entenda o impacto que um tour virtual 360º pode ter no
+                    seu negócio</p>
             </div>
             <div class="video-wrapper reveal">
-                <iframe 
-                    src="https://www.youtube.com/embed/eitj17DauIc" 
-                    title="Tour Virtual 360º Demo" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+                <iframe width="560" height="315" src="./IMG/igreja tour virtual.mp4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -1305,70 +1338,80 @@
                     <div class="benefit-number">01</div>
                     <div class="benefit-content">
                         <h4>Aumento de Visitas Presenciais</h4>
-                        <p>Quando o cliente consegue ver o ambiente antes, ele se sente mais seguro para ir até o local, reduzindo dúvidas e aumentando a chance da visita acontecer de fato.</p>
+                        <p>Quando o cliente consegue ver o ambiente antes, ele se sente mais seguro para ir até o local,
+                            reduzindo dúvidas e aumentando a chance da visita acontecer de fato.</p>
                     </div>
                 </div>
                 <div class="benefit-item reveal">
                     <div class="benefit-number">02</div>
                     <div class="benefit-content">
                         <h4>Destaque no Google</h4>
-                        <p>Negócios com conteúdo visual completo ganham até 2x mais atenção nos resultados do Google e no Maps, aparecendo com mais destaque para quem pesquisa na região.</p>
+                        <p>Negócios com conteúdo visual completo ganham até 2x mais atenção nos resultados do Google e
+                            no Maps, aparecendo com mais destaque para quem pesquisa na região.</p>
                     </div>
                 </div>
                 <div class="benefit-item reveal">
                     <div class="benefit-number">03</div>
                     <div class="benefit-content">
                         <h4>Confiança Instantânea</h4>
-                        <p>Mostrar o espaço real, sem filtros, transmite transparência e profissionalismo, o que gera credibilidade e confiança antes mesmo do primeiro contato.</p>
+                        <p>Mostrar o espaço real, sem filtros, transmite transparência e profissionalismo, o que gera
+                            credibilidade e confiança antes mesmo do primeiro contato.</p>
                     </div>
                 </div>
                 <div class="benefit-item reveal">
                     <div class="benefit-number">04</div>
                     <div class="benefit-content">
                         <h4>Diferencial Competitivo</h4>
-                        <p>Enquanto a maioria dos concorrentes tem apenas fotos comuns, o tour virtual coloca seu negócio à frente, criando uma vantagem visual clara e imediata.</p>
+                        <p>Enquanto a maioria dos concorrentes tem apenas fotos comuns, o tour virtual coloca seu
+                            negócio à frente, criando uma vantagem visual clara e imediata.</p>
                     </div>
                 </div>
                 <div class="benefit-item reveal">
                     <div class="benefit-number">05</div>
                     <div class="benefit-content">
                         <h4>Cliente Mais Decidido</h4>
-                        <p>Quem já conhece o ambiente pelo tour virtual chega mais preparado, com menos objeções e maior intenção de compra ou contratação.</p>
+                        <p>Quem já conhece o ambiente pelo tour virtual chega mais preparado, com menos objeções e maior
+                            intenção de compra ou contratação.</p>
                     </div>
                 </div>
                 <div class="benefit-item reveal">
                     <div class="benefit-number">06</div>
                     <div class="benefit-content">
                         <h4>Integração com Street View</h4>
-                        <p>O tour pode ser publicado diretamente no Google Street View e conectado ao Google Maps, facilitando que o cliente encontre, explore e reconheça seu negócio.</p>
+                        <p>O tour pode ser publicado diretamente no Google Street View e conectado ao Google Maps,
+                            facilitando que o cliente encontre, explore e reconheça seu negócio.</p>
                     </div>
                 </div>
                 <div class="benefit-item reveal">
                     <div class="benefit-number">07</div>
                     <div class="benefit-content">
                         <h4>Conteúdo Premium para Redes</h4>
-                        <p>As imagens e vídeos 360º podem ser usados em Instagram, Facebook, site e anúncios, gerando conteúdo diferenciado e de alto impacto visual.</p>
+                        <p>As imagens e vídeos 360º podem ser usados em Instagram, Facebook, site e anúncios, gerando
+                            conteúdo diferenciado e de alto impacto visual.</p>
                     </div>
                 </div>
                 <div class="benefit-item reveal">
                     <div class="benefit-number">08</div>
                     <div class="benefit-content">
                         <h4>Funciona 24h por Dia</h4>
-                        <p>Mesmo quando o negócio está fechado, o tour virtual continua apresentando o espaço, atendendo e convencendo clientes automaticamente.</p>
+                        <p>Mesmo quando o negócio está fechado, o tour virtual continua apresentando o espaço, atendendo
+                            e convencendo clientes automaticamente.</p>
                     </div>
                 </div>
                 <div class="benefit-item reveal">
                     <div class="benefit-number">09</div>
                     <div class="benefit-content">
                         <h4>Investimento Único</h4>
-                        <p>Diferente de anúncios recorrentes, o tour virtual é produzido uma única vez e continua gerando resultados por muito tempo, sem mensalidades obrigatórias.</p>
+                        <p>Diferente de anúncios recorrentes, o tour virtual é produzido uma única vez e continua
+                            gerando resultados por muito tempo, sem mensalidades obrigatórias.</p>
                     </div>
                 </div>
                 <div class="benefit-item reveal">
                     <div class="benefit-number">10</div>
                     <div class="benefit-content">
                         <h4>Ajuda o Cliente a Escolher Você</h4>
-                        <p>Ao permitir que o cliente "entre" no seu negócio antes da visita, você reduz incertezas e aumenta as chances de ele escolher você em vez da concorrência.</p>
+                        <p>Ao permitir que o cliente "entre" no seu negócio antes da visita, você reduz incertezas e
+                            aumenta as chances de ele escolher você em vez da concorrência.</p>
                     </div>
                 </div>
             </div>
@@ -1380,7 +1423,8 @@
             <div class="founder-image-wrapper">
                 <div class="founder-image">
                     <!-- Imagem do fundador pode ser adicionada aqui -->
-                    <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; font-size: 8rem; color: var(--white); background: linear-gradient(135deg, var(--accent), var(--gold));">
+                    <div
+                        style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; font-size: 8rem; color: var(--white); background: linear-gradient(135deg, var(--accent), var(--gold));">
                         <img src="./IMG/RRR02nov--11H28M.jpg" alt="">
                     </div>
                 </div>
@@ -1391,8 +1435,11 @@
             <div class="founder-info">
                 <h3>Rodrigo Rio Branco</h3>
                 <h4>Prime Tour 360º</h4>
-                <p>Sou especialista em experiências visuais que vendem, unindo estratégia de copywriting, marketing local e produção de tours virtuais 360º no Google. Ajudo empresas a se destacarem no Google, aumentarem a confiança do cliente e atraírem mais visitas presenciais por meio de imagens, vídeos e apresentações imersivas que influenciam decisões de compra.</p>
-                
+                <p>Sou especialista em experiências visuais que vendem, unindo estratégia de copywriting, marketing
+                    local e produção de tours virtuais 360º no Google. Ajudo empresas a se destacarem no Google,
+                    aumentarem a confiança do cliente e atraírem mais visitas presenciais por meio de imagens, vídeos e
+                    apresentações imersivas que influenciam decisões de compra.</p>
+
                 <div class="founder-highlights">
                     <div class="highlight-item">
                         <div class="highlight-icon">✓</div>
@@ -1412,7 +1459,8 @@
                     </div>
                 </div>
 
-                <a href="https://wa.me/+5519989397275?text=Olá%20Rodrigo,%20gostaria%20de%20saber%20mais%20sobre%20os%20tours%20virtuais" class="btn-primary" style="background: var(--gold); color: var(--primary);">
+                <a href="https://wa.me/+5519989397275?text=Olá%20Rodrigo,%20gostaria%20de%20saber%20mais%20sobre%20os%20tours%20virtuais"
+                    class="btn-primary" style="background: var(--gold); color: var(--primary);">
                     Entre em Contato JÁ →
                 </a>
             </div>
@@ -1422,8 +1470,10 @@
     <section class="cta-section" id="contato">
         <div class="cta-content">
             <h2 class="reveal">Pronto para Transformar seu Negócio?</h2>
-            <p class="reveal">Solicite um orçamento profissional e descubra como o tour virtual 360º pode aumentar suas visitas e conversões desde o primeiro dia.</p>
-            <a href="https://wa.me/+5519989397275?text=Olá,%20gostaria%20de%20um%20orçamento%20profissional" class="btn-primary reveal">
+            <p class="reveal">Solicite um orçamento profissional e descubra como o tour virtual 360º pode aumentar suas
+                visitas e conversões desde o primeiro dia.</p>
+            <a href="https://wa.me/+5519989397275?text=Olá,%20gostaria%20de%20um%20orçamento%20profissional"
+                class="btn-primary reveal">
                 Solicitar Orçamento Agora →
             </a>
         </div>
@@ -1433,7 +1483,8 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h3>PRIME TOUR 360º</h3>
-                <p>Fotografia 360º profissional e tours virtuais imersivos para negócios que querem se destacar no ambiente digital e conquistar mais clientes.</p>
+                <p>Fotografia 360º profissional e tours virtuais imersivos para negócios que querem se destacar no
+                    ambiente digital e conquistar mais clientes.</p>
                 <div class="social-links">
                     <a href="#" class="social-link">📱</a>
                     <a href="#" class="social-link">📸</a>
@@ -1494,12 +1545,12 @@
         // Scroll Reveal Animation
         function reveal() {
             const reveals = document.querySelectorAll('.reveal');
-            
+
             reveals.forEach(element => {
                 const windowHeight = window.innerHeight;
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-                
+
                 if (elementTop < windowHeight - elementVisible) {
                     element.classList.add('active');
                 }
@@ -1513,16 +1564,16 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     // Close mobile menu if open
                     navLinks.classList.remove('active');
                     menuToggle.classList.remove('active');
-                    
+
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
@@ -1532,7 +1583,7 @@
         });
 
         // Load iframes properly
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const iframes = document.querySelectorAll('.tour-iframe-container iframe');
             iframes.forEach(iframe => {
                 // Forçar reload para garantir que carreguem
@@ -1543,4 +1594,5 @@
         });
     </script>
 </body>
+
 </html>
